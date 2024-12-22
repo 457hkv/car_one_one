@@ -12,4 +12,5 @@ export enum orderState {
   // Completed = "已完成", // 已完成
   // Cancelled = "已取消", // 已完成
   // Refunded = "已退款", // 已完成
+  cancel = 4,
 }
