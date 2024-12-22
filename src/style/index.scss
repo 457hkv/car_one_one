@@ -1,0 +1,189 @@
+view,
+text {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+page {
+  // background-color: #f1f1f1;
+  height: 100%;
+}
+
+.u-text {
+  flex: none !important;
+  width: auto !important;
+}
+
+.bg-gray {
+  background-color: #f1f1f1;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.common-padding {
+  padding: 20rpx;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.min-full-height {
+  min-height: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.overflow {
+  &-hidden {
+    overflow: hidden;
+  }
+  &-auto {
+    overflow: auto;
+  }
+}
+
+.box-sizing {
+  &-border-box {
+    box-sizing: border-box;
+  }
+}
+
+.d {
+  &-flex {
+    display: flex;
+  }
+  &-block {
+    display: block;
+  }
+}
+
+.flex {
+  &-none {
+    flex: none !important;
+  }
+}
+
+.text-align {
+  &-left {
+    text-align: left;
+  }
+  &-right {
+    text-align: left;
+  }
+  &-center {
+    text-align: center;
+  }
+}
+
+.justify-content {
+  &-flex-start {
+    justify-content: flex-start;
+  }
+  &-flex-end {
+    justify-content: flex-end;
+  }
+  &-center {
+    justify-content: center;
+  }
+  &-space-between {
+    justify-content: space-between;
+  }
+  &-space-around {
+    justify-content: space-around;
+  }
+}
+
+.align-items {
+  &-flex-start {
+    align-items: flex-start;
+  }
+  &-end {
+    justify-items: flex-end;
+  }
+  &-center {
+    align-items: center;
+  }
+}
+
+// 最大圆角数
+$max-border-radius: 20;
+// 循环生成圆角数
+@for $i from 1 through $max-border-radius {
+  .border {
+    &-radius-#{$i} {
+      border-radius: #{$i}rpx;
+    }
+    &-top-left-radius-#{$i} {
+      border-top-left-radius: #{$i}rpx;
+    }
+    &-top-right-radius-#{$i} {
+      border-top-right-radius: #{$i}rpx;
+    }
+    &-bottom-left-radius-#{$i} {
+      border-bottom-left-radius: #{$i}rpx;
+    }
+    &-bottom-right-radius-#{$i} {
+      border-bottom-right-radius: #{$i}rpx;
+    }
+  }
+}
+
+// 最大距离 [ padding 和 margin ]
+$max-space: 30; // 设置你需要的最大 space 值
+// 循环生成类选择器
+@for $i from 1 through $max-space {
+  // padding
+  .p-#{$i} {
+    padding: #{$i}rpx;
+  }
+  .pl-#{$i} {
+    padding-left: #{$i}rpx;
+  }
+  .pr-#{$i} {
+    padding-right: #{$i}rpx;
+  }
+  .pt-#{$i} {
+    padding-top: #{$i}rpx;
+  }
+  .pb-#{$i} {
+    padding-bottom: #{$i}rpx;
+  }
+  .px-#{$i} {
+    padding-left: #{$i}rpx;
+    padding-right: #{$i}rpx;
+  }
+  .py-#{$i} {
+    padding-top: #{$i}rpx;
+    padding-bottom: #{$i}rpx;
+  }
+  // margin
+  .m-#{$i} {
+    margin: #{$i}rpx;
+  }
+  .ml-#{$i} {
+    margin-left: #{$i}rpx;
+  }
+  .mr-#{$i} {
+    margin-right: #{$i}rpx;
+  }
+  .mt-#{$i} {
+    margin-top: #{$i}rpx;
+  }
+  .mb-#{$i} {
+    margin-bottom: #{$i}rpx;
+  }
+  .mx-#{$i} {
+    margin-left: #{$i}rpx;
+    margin-right: #{$i}rpx;
+  }
+  .my-#{$i} {
+    margin-top: #{$i}rpx;
+    margin-bottom: #{$i}rpx;
+  }
+}

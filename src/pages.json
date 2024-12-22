@@ -1,0 +1,169 @@
+{
+  "easycom": {
+    // 注意一定要放在custom里，否则无效，https://ask.dcloud.net.cn/question/131175
+    "custom": {
+      "^u--(.*)": "uview-plus/components/u-$1/u-$1.vue",
+      "^up-(.*)": "uview-plus/components/u-$1/u-$1.vue",
+      "^u-([^-].*)": "uview-plus/components/u-$1/u-$1.vue"
+    }
+  },
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "",
+        "navigationStyle": "custom"
+      }
+    },
+    // {
+    //   "path": "pages/message/index",
+    //   "style": {
+    //     "navigationBarTitleText": "消息",
+    //     "enablePullDownRefresh": false
+    //   }
+    // },
+    {
+      "path": "pages/order/index",
+      "style": {
+        "navigationBarTitleText": "订单",
+        "enablePullDownRefresh": false,
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/mine/index",
+      "style": {
+        "navigationBarTitleText": "我的",
+        "enablePullDownRefresh": false,
+        "navigationBarBackgroundColor": "#d4e9ff"
+      }
+    },
+    {
+      "path": "pages/login/index",
+      "style": {
+        "navigationBarTitleText": "登录",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/createOrder/index",
+      "style": {
+        "navigationBarTitleText": "下单",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/selectCar/index",
+      "style": {
+        "navigationBarTitleText": "车辆选择",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/selectCarModel/index",
+      "style": {
+        "navigationBarTitleText": "车辆型号",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/updateUserInfo/index",
+      "style": {
+        "navigationBarTitleText": "个人信息",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/orderDetail/index",
+      "style": {
+        "navigationBarTitleText": "订单详情",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/serviceAgreement/index",
+      "style": {
+        "navigationBarTitleText": "服务协议",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/aboutUs/index",
+      "style": {
+        "navigationBarTitleText": "关于车壹壹",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/reviewHistory/index",
+      "style": {
+        "navigationBarTitleText": "我的评价",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/review/index",
+      "style": {
+        "navigationBarTitleText": "评价",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/selectProduct/index",
+      "style": {
+        "navigationBarTitleText": "配件选择",
+        "enablePullDownRefresh": true
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "backgroundColor": "#FFFFFF"
+  },
+
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/tabBar/home.png",
+        "selectedIconPath": "static/tabBar/home_active.png"
+      },
+      // {
+      //   "pagePath": "pages/message/index",
+      //   "text": "消息",
+      //   "iconPath": "static/tabBar/message.png",
+      //   "selectedIconPath": "static/tabBar/message_active.png"
+      // },
+      {
+        "pagePath": "pages/order/index",
+        "text": "订单",
+        "iconPath": "static/tabBar/order.png",
+        "selectedIconPath": "static/tabBar/order_active.png"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "我的",
+        "iconPath": "static/tabBar/mine.png",
+        "selectedIconPath": "static/tabBar/mine_active.png"
+      }
+    ]
+  },
+  "condition": {
+    "current": 1,
+    "list": [
+      {
+        "name": "下单",
+        "paht": "/pages/createOrder/index"
+      },
+      {
+        "name": "选择产品",
+        "path": "pages/selectProduct/index"
+      }
+    ]
+  }
+}
