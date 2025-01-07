@@ -24,7 +24,7 @@
           :list="menuList"
           keyName="name"
           :scrollable="false"
-          @change="tabsChange"
+          @change="tabsChanged"
         />
       </view>
     </u-sticky>
@@ -64,7 +64,7 @@ const menuList = reactive<MenuListType[]>([
   },
 ]);
 
-const tabsChange = (data: MenuListType & { index: number }) => {
+const tabsChanged = (data: MenuListType & { index: number }) => {
   activeTabName.value = data.key;
 };
 </script>

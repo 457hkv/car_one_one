@@ -47,7 +47,7 @@ const chooseavatar = (res: { detail: { avatarUrl: string } }) => {
 const confirm = () => {
   console.log("获取: ", formData.value);
   System.userProfilePut(formData.value).then((res) => {
-    if (res.httpCode === 200) {
+    // if (res.httpCode === 200) {
       userStore.$patch((state) => {
         state.userInfo.username = formData.value.username;
         state.userInfo.avatarUrl = formData.value.avatarUrl;
@@ -58,7 +58,7 @@ const confirm = () => {
       setTimeout(() => {
         uni.navigateBack();
       }, 300);
-    }
+    // }
   });
 };
 </script>

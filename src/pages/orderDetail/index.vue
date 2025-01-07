@@ -119,6 +119,7 @@ const formData = ref<UserOrderIn>({
   carSeriesId: 0,
   carOwnerLongitude: 0,
   carOwnerLatitude: 0,
+  carReplacements: [],
 });
 
 onLoad((data) => {
