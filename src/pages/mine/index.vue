@@ -12,13 +12,15 @@
         <view class="con-right">
           <view class="user-name">
             <text class="name">
+              <!-- FIXME - 定义一个 loginStatus 来表示是否已经登录 -->
+              <!-- FIXME - 如果 loginStatus 为 true 才获取用户名 -->
               {{ userStore.$state.userInfo.username || "登陆/注册" }}
             </text>
             <text class="iconfont icon-jinrujiantou"></text>
           </view>
           <view class="phone-wrap" v-if="userStore.$state.loginData.token">
             <text class="iconfont icon-qiehuanchengshi"></text>
-            <text class="phone-number">13282726250</text>
+            <text class="phone-number">156****10</text>
           </view>
         </view>
       </view>
