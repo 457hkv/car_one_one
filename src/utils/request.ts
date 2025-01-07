@@ -6,10 +6,11 @@ type OptionsType = Pick<
 >;
 
 export type ResultType<T> = {
-  errCode: string;
-  httpCode: number;
+  // errCode: string;
+  // httpCode: number;
+  status: string | number;
+  message: string;
   data: T;
-  msg: string;
 };
 
 class requestData<T> {
@@ -62,16 +63,16 @@ class requestData<T> {
       return Promise.reject(data);
     }
     const result = data.data as ResultType<T>;
-    if (result.httpCode === 401) {
-      uni.navigateTo({
-        url: "/pages/login/index",
-      });
-      return Promise.reject(result);
-    }
-    if (result.httpCode !== 200) {
-      console.log("非200, 请求失败");
-      return Promise.reject(result);
-    }
+    // if (result.httpCode === 401) {
+    //   uni.navigateTo({
+    //     url: "/pages/login/index",
+    //   });
+    //   return Promise.reject(result);
+    // }
+    // if (result.httpCode !== 200) {
+    //   console.log("非200, 请求失败");
+    //   return Promise.reject(result);
+    // }
     return Promise.resolve(result);
   }
 }
