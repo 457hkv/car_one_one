@@ -21,21 +21,19 @@ const userStore = useUserStore();
 const login = () => {
   uni
     .login()
-    .then((res) => {
-      return System.login({ code: res.code });
-    })
+    .then((res) => System.login({ code: res.code }))
     .then(({ data }) => {
       userStore.changeToken(data.token);
       return System.userProfileGet();
     })
     .then(({ data }) => {
-      uni.showToast({
-        title: "登录成功!",
-      });
+      uni.showToast({ title: "登录成功!" });
       userStore.changeUserInfo(data);
       uni.navigateBack();
     })
-    .catch((err) => {});
+    .catch((err) => {
+      uni.showToast({ title: "登录时发生错误!", icon: "error" });
+    });
 };
 </script>
 
