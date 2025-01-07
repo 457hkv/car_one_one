@@ -5,7 +5,7 @@
         <button
           class="avatar-btn"
           open-type="chooseAvatar"
-          @chooseavatar="chooseavatar"
+          @chooseavatar="chooseAvatar"
         >
           <up-avatar :src="formData.avatarUrl" shape="square" size="50" />
         </button>
@@ -39,7 +39,7 @@ const formData = ref<userProfileInfo>({
   avatarUrl: userStore.$state.userInfo.avatarUrl,
 });
 
-const chooseavatar = (res: { detail: { avatarUrl: string } }) => {
+const chooseAvatar = (res: { detail: { avatarUrl: string } }) => {
   console.log("获取名字: ", res);
   formData.value.avatarUrl = res.detail.avatarUrl;
 };
